@@ -176,6 +176,75 @@
   text-align: justify;
   color: #e2e8f0;
 }
+    @media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container img {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 10px;
+    }
+
+    .church-name {
+        font-size: 2rem;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .hero-content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .service-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+    .church-name {
+    text-shadow: 0 0 15px rgba(0, 191, 255, 0.8);
+}
+    .service-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+    .service-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
+    .btn {
+    box-shadow: 0 0 15px #00bfff;
+}
   </style>
 </head>
 <body>
