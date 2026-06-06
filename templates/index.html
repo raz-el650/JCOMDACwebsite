@@ -176,74 +176,76 @@
   text-align: justify;
   color: #e2e8f0;
 }
-    @media (max-width: 768px) {
+   @media (max-width: 768px) {
 
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-    }
+  header {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
 
-    .logo-container {
-        flex-direction: column;
-        text-align: center;
-    }
+  .logo {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .logo-container img {
-        width: 90px;
-        height: 90px;
-        margin-bottom: 10px;
-    }
+  .logo img {
+    width: 70px;
+    height: 70px;
+  }
 
-    .church-name {
-        font-size: 2rem;
-        line-height: 1.3;
-        text-align: center;
-    }
+  .logo h3 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
 
-    .nav-links {
-        margin-top: 15px;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
-    }
+  nav {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
 
-    .hero-content {
-        padding: 20px;
-        text-align: center;
-    }
+  nav a {
+    margin-left: 0;
+    font-size: 16px;
+  }
 
-    .hero-content h1 {
-        font-size: 2rem;
-    }
+  .hero {
+    padding: 120px 20px 40px;
+  }
 
-    .service-cards {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+  .hero img {
+    width: 100px;
+    height: 100px;
+  }
 
-    .contact-container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-}
-    .church-name {
-    text-shadow: 0 0 15px rgba(0, 191, 255, 0.8);
-}
-    .service-card {
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-}
-    .service-card:hover {
-    transform: translateY(-5px);
-    transition: 0.3s ease;
-}
-    .btn {
-    box-shadow: 0 0 15px #00bfff;
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 70px 20px;
+  }
+
+  #about p {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    font-size: 16px;
+  }
 }
   </style>
 </head>
@@ -252,7 +254,7 @@
 <header>
   <div class="logo">
     <img src="{{ url_for('static', filename='logo.png') }}">
-    <h3>Jesus Christ Our Mighty Deliverer and Anointing Church</h3>
+    <h3>JCOMDAC</h3>
   </div>
 
   <nav>
@@ -269,12 +271,13 @@
   </video>
 
   <img src="{{ url_for('static', filename='logo.png') }}">
+
   <h1>Jesus Christ Our Mighty Deliverer and Anointing Church</h1>
+
   <p>Faith • Healing • Anointing</p>
+
   <button class="btn">Join Us</button>
 </section>
-
-<section id="about" class="section">
   <h2>About Us</h2>
   <p>
     Jesus Christ Our Mighty Deliverer and Anointing Church is a Christ-centered
