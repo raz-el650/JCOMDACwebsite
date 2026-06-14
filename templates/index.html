@@ -177,7 +177,13 @@
   color: #e2e8f0;
 }
    @media (max-width: 768px) {
+.desktop-nav {
+  display: none;
+}
 
+.mobile-menu {
+  display: block;
+}
   header {
     flex-direction: column;
     padding: 15px;
@@ -247,6 +253,79 @@
     font-size: 16px;
   }
 }
+    #mission-vision h2{
+  color:#38bdf8;
+  margin-bottom:30px;
+}
+
+#mission-vision .card{
+  text-align:left;
+}
+
+#mission-vision h3{
+  color:#38bdf8;
+  margin-bottom:15px;
+}
+
+#mission-vision h4{
+  margin-top:10px;
+  margin-bottom:8px;
+  color:#fff;
+}
+
+#mission-vision ul{
+  padding-left:20px;
+}
+    html {
+  scroll-behavior: smooth;
+}
+    .menu-container {
+  position: relative;
+}
+
+.menu-btn {
+  background: #38bdf8;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background: rgba(0,0,0,0.9);
+  min-width: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(56,189,248,0.3);
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+    .mobile-menu {
+  display: none;
+}
+
+.desktop-nav {
+  display: flex;
+}
+
   </style>
 </head>
 <body>
@@ -257,12 +336,23 @@
     <h3>JCOMDAC</h3>
   </div>
 
-  <nav>
+  <nav class="desktop-nav">
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="mobile-menu menu-container">
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <div class="dropdown-menu" id="dropdownMenu">
     <a href="#">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
-  </nav>
+  </div>
+</div>
 </header>
 
 <section class="hero">
@@ -274,10 +364,12 @@
 
   <h1>Jesus Christ Our Mighty Deliverer and Anointing Church</h1>
 
-  <p>Faith • Healing • Anointing</p>
+  <p> Faith • Healing • Anointing
+  • Deliverance </p>
 
   <button class="btn">Join Us</button>
 </section>
+ <section id="about" class="section">
   <h2>About Us</h2>
   <p>
     Jesus Christ Our Mighty Deliverer and Anointing Church is a Christ-centered
@@ -318,7 +410,55 @@
     anointing, and experience the abundant life that is found in Christ alone.
   </p>
 </section>
+<section id="mission-vision" class="section">
+  <h2>Mission, Vision & Core Values</h2>
 
+  <div class="cards">
+
+    <div class="card">
+      <h3>Mission</h3>
+
+      <h4>To Self</h4>
+      <p>
+        To live a life worthy of the calling we have received—the awesome privilege
+        of being called Christ's very own.
+        <br><strong>Ephesians 4:1</strong>
+      </p>
+
+      <br>
+
+      <h4>To People</h4>
+      <p>
+        We are called to make Christ's devoted followers rooted deeply in love
+        and founded securely in love.
+        <br><strong>Ephesians 3:17–19</strong>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Vision</h3>
+      <p>
+        Our vision is to see a unified movement of thousands of committed and
+        transformed followers of the Lord Jesus Christ, equipping new believers,
+        families, communities, and nations to be ready as the blameless Bride
+        of Christ.
+        <br><br>
+        <strong>John 17:23–24, Ephesians 5:27</strong>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Core Values</h3>
+      <ul style="text-align:left; line-height:2;">
+        <li>Love the Lord our God and Love People (Mark 12:30–31)</li>
+        <li>Obey the Lord our God and His Word (1 John 5:3)</li>
+        <li>Value others above self (Philippians 2:3)</li>
+        <li>Excellence as God's chosen people in faith, works, and living (1 Peter 2:9)</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
 <section id="services" class="section">
   <h2>Our Services</h2>
   <div class="cards">
@@ -352,7 +492,7 @@
 </footer>
 
 <!-- CONTACT ICONS -->
-<section class="section">
+<section id="contact" class="section">
   <h2>Connect With Us</h2>
   <div style="margin-top:20px; display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
     <a href="mailto:jcomdac@gmail.com" target="_blank" style="text-decoration:none; color:white; font-size:24px;">
@@ -392,6 +532,11 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+  function toggleMenu() {
+  document.getElementById("dropdownMenu")
+          .classList.toggle("show");
+}
+
 </script>
 
 </body>
